@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textView = (TextView)findViewById(R.id.blueFletchTextView);
+        textView = (TextView) findViewById(R.id.blueFletchTextView);
 
         ClearableCookieJar cookieJar = new PersistentCookieJar(new SetCookieCache(), new SharedPrefsCookiePersistor(this));
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
@@ -44,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
         Retrofit retrofit = builder.build();
 
         BlueFletchClient client = retrofit.create(BlueFletchClient.class);
+        login(client);
+    }
+
+    private void login(final BlueFletchClient client){
         Call<LoginResult> call = client.login("test1", "pass1");
 
         call.enqueue(new Callback<LoginResult>() {
@@ -56,36 +60,35 @@ public class MainActivity extends AppCompatActivity {
                         + "ImageURL: " + result.getImageUrl();
 
                 textView.setText(resultString);
+                logout(client);
             }
 
             @Override
             public void onFailure(Call<LoginResult> call, Throwable t) {
-                Toast.makeText(MainActivity.this, "ERROR :(", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "ERROR", Toast.LENGTH_SHORT).show();
             }
         });
 
-        /*
+    }
 
-        System.out.println("STRING ONE");
+    private void logout(BlueFletchClient client){
         Call<ResponseBody> call1 = client.logout();
-        System.out.println("STRING TWO");
 
         call1.enqueue(new Callback<ResponseBody>() {
-
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                System.out.println(response.code());
                 if (response.code() == 200){
-                    textView.setText("LOGOUT WORKED!");
+                    textView.setText("Logout Successful");
                 }
                 else{
-                    System.out.println("LOGOUT FAILED I GUESS");
+                    Toast.makeText(MainActivity.this, "ERROR", Toast.LENGTH_SHORT).show();
                 }
             }
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(MainActivity.this, "ERROR :(", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "ERROR", Toast.LENGTH_SHORT).show();
             }
         });
-        */
     }
 }
