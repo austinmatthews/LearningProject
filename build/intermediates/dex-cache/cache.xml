@@ -12,6 +12,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/austin/.android/build-cache/58f57fc891b6e7954a605f01d5f503b4d7edd50b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="4585dc91cf7d8f029d78a84e84b4fde6b4dedfe6">
+        <dex dex="/home/austin/AndroidStudioProjects/BlueFletchLearningProject/app/build/intermediates/pre-dexed/debug/classes_29ce6e9dfe7bab63af96d3febfc1ec013d317a16.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/austin/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.3.0/bcacde6a8ccedcc56c127403d26b76072fe6214d/retrofit-2.3.0.jar"
         jumboMode="false"
         optimize="true"

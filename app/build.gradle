@@ -20,7 +20,7 @@ android {
 }
 
 dependencies {
-
+    compile 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     compile fileTree(dir: 'libs', include: ['*.jar'])
