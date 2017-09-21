@@ -1,27 +1,28 @@
 package io.matthews.austin.bluefletchlearningproject;
 
-import java.io.Serializable;
 import java.util.List;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.*;
 
 public interface BlueFletchClient {
-//@FormUrlEncoded
 
-/*
     //Create a new comment
     @POST("/comment")
-    Call<LoginResult> login(
+    Call<Comment> createComment(
             @Field("username") String uname,
-            @Field("postId") int postId,
+            @Field("postId") String postId,
             @Field("commentText") String commentText
     );
 
     //Update comment text
     @PUT("/comment/{id}")
-    Call<Test> testServer();
-*/
+    Call<Post> updateComment(
+            @Field("username") String uname,
+            @Path("id") String id,
+            @Field("commentText") String commentText
+    );
+
     //Get posts and their comments
     @GET("/feed")
     Call<List<Post>> getPosts();
@@ -30,7 +31,7 @@ public interface BlueFletchClient {
     //Login User
     @POST("/login")
     //Call object lets us do this asynchronously
-    Call<LoginResult> login(
+    Call<Login> login(
         @Field("username") String uname,
         @Field("password") String password
     );
@@ -38,34 +39,33 @@ public interface BlueFletchClient {
     //Logout user and clear the session
     @POST("/logout")
     Call<ResponseBody> logout();
-/*
-    //Create a new post (thread)
+
+    //Create a new post
     @POST("/post")
-    Call<PostResult> post(
+    Call<Post> createPost(
         @Field("username") String uname,
         @Field("postText") String postText
     );
 
     //Update post text
     @PUT("/post/{id}")
-    Call<Test> testServer();
+    Call<Post> updatePost(
+            @Path("id") String id,
+            @Field("newPostText") String newPostText,
+            @Field("username") String uname
+    );
 
     //Test the BlueFletch API
     @GET("/test")
-    Call<Test> testServer();
-*/
+    Call<ResponseBody> testServer();
+
     //Get the information for the logged in user
     @GET("/user")
     Call<User> getLoggedInUserInfo();
-/*
-    //Upload a new profile picture
-    @PUT("/user/{username}/profilepic")
-    Call<Test> testServer();
 
     //Get the information for a specific user
     @GET("/user/username/{username}")
-    Call<Test> testServer();
-
-
-*/
+    Call<User> getOtherUserInfo(
+            @Path("username") String uname
+    );
 }

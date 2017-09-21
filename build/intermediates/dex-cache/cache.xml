@@ -2,13 +2,40 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="/home/austin/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/amatthews/AndroidStudioProjects/LearningProject/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/amatthews/AndroidStudioProjects/LearningProject/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_86a3ee036c7950ac5666e444154a2564776b67a2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/amatthews/AndroidStudioProjects/LearningProject/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="edfe87a4466ea66c5d5b9f8babd35b060f46d5e1">
+        <dex dex="/Users/amatthews/AndroidStudioProjects/LearningProject/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_21a1d3a202f0ab533048e8fddb69cc3583f92e3d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/amatthews/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
         optimize="true"
         revision="26.0.0"
         sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/home/austin/AndroidStudioProjects/BlueFletchLearningProject/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_b3b48d09b90dbc92a7b876547a556505f7b3aeb9.jar" />
+        <dex dex="/Users/amatthews/AndroidStudioProjects/LearningProject/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_1f5fd21b65d71aa368146f55d6badf9d71ac875a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/amatthews/.android/build-cache/22fcc4ee534ea8a08c6dc003af8c8680b792f8a1/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="/Users/amatthews/AndroidStudioProjects/LearningProject/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fa9a294c81f7f722772b5f9abc12a8ea676e0557/classes.dex" />
     </item>
 
 </items>
