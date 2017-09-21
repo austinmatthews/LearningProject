@@ -1,5 +1,6 @@
 package io.matthews.austin.bluefletchlearningproject;
 
+import java.io.Serializable;
 import java.util.List;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
